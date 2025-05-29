@@ -11,16 +11,20 @@ import DashboardOverview from './_components/transaction-overview'
 
 async function DashboardPage(params) {
 
-  const accounts = await getUserAccounts()
+  const [accounts, transactions] = await Promise.all([
+    getUserAccounts(),
+    getDashboardData(),
+  ]);
 
   const defaultAccount = accounts?.find((account) => account.isDefault);
-  let budgetData = null;
 
+  // Get budget for default account
+  let budgetData = null;
   if (defaultAccount) {
-    budgetData = await getCurrentBudget(defaultAccount.id)
+    budgetData = await getCurrentBudget(defaultAccount.id);
   }
 
-  const transactions = await getDashboardData(defaultAccount.id);
+  
   return (
     <div className='space-y-8'>
         {/* Budget Progress */}
