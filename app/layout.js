@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         {/* footer */}
         <footer className="bg-blue-50 py-12">
           <div className="container mx-auto text-center text-gray-600 px-4">
-            <p>Made by Samarth tembe to manage your wealth</p>
+            <p>© 2025 Wealth — Created by Samarth Tembe to help you track your income and expenses effortlessly.h</p>
           </div>
         </footer>
       </body>
