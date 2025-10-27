@@ -21,11 +21,7 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen">{children} </main>
         <Toaster richColors/>
         {/* footer */}
-        <footer className="bg-blue-50 py-12">
-          <div className="container mx-auto text-center text-gray-600 px-4">
-            <p>© 2025 Wealth — Created by Samarth Tembe to help you track your income and expenses effortlessly.h</p>
-          </div>
-        </footer>
+       
       </body>
     </html>
     </ClerkProvider>
